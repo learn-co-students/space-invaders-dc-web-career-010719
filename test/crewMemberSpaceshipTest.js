@@ -21,42 +21,42 @@ describe('ship with a crew', () => {
       expect(pilot.currentShip.constructor).to.be.a('function');
     });
 
-  //   it('should create the association between a crew member and ship', () => {
-  //     expect(pilot.currentShip.shields).to.eq(4);
-  //     expect(pilot.currentShip).to.have.own.property('name', 'Millenium Falcon');
-  //     expect(pilot.currentShip.crew[0]).to.deep.eq(pilot);
-  //     expect(pilot.currentShip.crew[1]).to.deep.eq(defender);
-  //     expect(pilot.currentShip.crew[2]).to.deep.eq(gunner);
-  //   });
-  // });
-  //
-  // describe('charge phasers', () => {
-  //   it("it should set phasers to 'charged' when the gunner chargePhasers()", () => {
-  //     pilot.chargePhasers();
-  //     expect(aluminumFalcon.phasersCharge).to.eq('uncharged');
-  //
-  //     gunner.chargePhasers();
-  //     expect(aluminumFalcon.phasersCharge).to.eq('charged');
-  //   });
-  // });
-  //
-  // describe('engage warp drive', () => {
-  //   it("should set the spaceship's warp drive to 'engaged' when the pilot uses engageWarpDrive()", () => {
-  //     defender.engageWarpDrive();
-  //     expect(aluminumFalcon.warpDrive).to.eq('disengaged');
-  //
-  //     pilot.engageWarpDrive();
-  //     expect(aluminumFalcon.warpDrive).to.eq('engaged');
-  //   });
-  // });
-  //
-  // describe('cloak', () => {
-  //   it('should cloak the ship when a defender uses setsInvisibility()', () => {
-  //     gunner.setsInvisibility();
-  //     expect(aluminumFalcon.cloaked).to.eq(false);
-  //
-  //     defender.setsInvisibility();
-  //     expect(aluminumFalcon.cloaked).to.eq(true);
+    it('should create the association between a crew member and ship', () => {
+      expect(pilot.currentShip.shields).to.eq(4);
+      expect(pilot.currentShip).to.have.own.property('name', 'Millenium Falcon');
+      expect(pilot.currentShip.crew[0]).to.deep.eq(pilot);
+      expect(pilot.currentShip.crew[1]).to.deep.eq(defender);
+      expect(pilot.currentShip.crew[2]).to.deep.eq(gunner);
+    });
+  });
+
+  describe('charge phasers', () => {
+    it("it should set phasers to 'charged' when the gunner chargePhasers()", () => {
+      pilot.chargePhasers();
+      expect(aluminumFalcon.phasersCharge).to.eq('uncharged');
+
+      gunner.chargePhasers();
+      expect(aluminumFalcon.phasersCharge).to.eq('charged');
+    });
+  });
+
+  describe('engage warp drive', () => {
+    it("should set the spaceship's warp drive to 'engaged' when the pilot uses engageWarpDrive()", () => {
+      defender.engageWarpDrive();
+      expect(aluminumFalcon.warpDrive).to.eq('disengaged');
+
+      pilot.engageWarpDrive();
+      expect(aluminumFalcon.warpDrive).to.eq('engaged');
+    });
+  });
+
+  describe('cloak', () => {
+    it('should cloak the ship when a defender uses setsInvisibility()', () => {
+      gunner.setsInvisibility();
+      expect(aluminumFalcon.cloaked).to.eq(false);
+
+      defender.setsInvisibility();
+      expect(aluminumFalcon.cloaked).to.eq(true);
     });
   });
 });
